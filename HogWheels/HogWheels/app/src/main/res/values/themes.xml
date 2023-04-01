@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HogWheels" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryVariant">#900000</item>
+        <item name="colorOnPrimary">#900000</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#900000</item>
+        <item name="colorSecondaryVariant">#900000</item>
+        <item name="colorOnSecondary">#900000</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">#000000</item>
+        <item name="android:actionBarSize">75dp</item>
+
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="actionBarSize">75dp</item>
+
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.HogWheels</item>
+
+    </style>
+
+
+
+    <style name="Theme.HogWheels.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.HogWheels.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Action Bar Styles -->
+    <style name="ActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@color/red1</item>
+
+        <item name="android:titleTextStyle">@style/NoTitleText</item>
+    </style>
+
+    <style name="NoTitleText">
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">#00000000</item>
+    </style>
+
+</resources>

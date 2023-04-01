@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_activity"
+    tools:context="com.bytehogs.hogwheels.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- The ActionBar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarID"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red1"
+            android:fitsSystemWindows="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways" />
+        <!-- The main content view -->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/car_view"
+
+            android:visibility="gone"
+
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_rectangle">
+
+            </ImageView>
+
+
+            <TextView
+                android:id="@+id/modelTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/shippori"
+                android:text="Ford"
+                android:textColor="#FFFFFF"
+
+                android:layout_marginStart="50dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/carImageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/modelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/shippori"
+                android:text="Flex"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+
+                app:layout_constraintStart_toEndOf="@+id/modelTextView2"
+                app:layout_constraintTop_toTopOf="@+id/modelTextView2" />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/shippori"
+                android:text="2014"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="5dp"
+
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/modelTextView"
+                app:layout_constraintTop_toTopOf="@+id/modelTextView" />
+
+            <ImageView
+                android:id="@+id/carImageView"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+
+                android:layout_marginStart="10dp"
+                android:src="@drawable/car"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView">
+
+            </ImageView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/noCarsAddedView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/shippori"
+            android:text="No Cars Added"
+            android:textColor="#b3b3b3"
+            android:textSize="31sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/add_new_car_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginRight="10dp"
+
+            android:background="@drawable/plus_sign"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbarID"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarID"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigationViewID"
+
+        app:menu="@menu/user_hamburger_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
